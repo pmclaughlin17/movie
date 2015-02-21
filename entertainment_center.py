@@ -25,19 +25,19 @@ all_movies = []
 #
 movie_list = [
               {'name': 'Lawrence of Arabia', 'trailer': 'https://www.youtube.com/watch?v=zmr1iSG3RTA'},
-              {'name': 'Apocalypse Now', 'trailer': 'https://www.youtube.com/watch?v=CcfZk8H7aQo'},
-              {'name': 'Amelie', 'trailer': 'https://www.youtube.com/watch?v=HEFrLnS5sQY'},
-              {'name': 'Patton', 'trailer': 'https://www.youtube.com/watch?v=g-0dTpzNzwo'},
-              {'name': 'Bananas', 'trailer': 'https://www.youtube.com/watch?v=Xyqm-wWnX0A'},
-              {'name': 'Zelig', 'trailer': 'https://www.youtube.com/watch?v=agkCEOHQVgg'},
-              {'name': 'Strange Brew', 'trailer': 'https://www.youtube.com/watch?v=yZCI39NWZ5g'},
-              {'name': 'The Good, the Bad and the Ugly', 'trailer': 'https://www.youtube.com/watch?v=WCN5JJY_wiA'},
-              {'name': 'Monty Python and the Holy Grail', 'trailer': 'https://www.youtube.com/watch?v=urRkGvhXc8w'},
-              {'name': 'Terminator 2', 'trailer': 'https://www.youtube.com/watch?v=eajuMYNYtuY'},
-              {'name': 'Casablanca', 'trailer': 'https://www.youtube.com/watch?v=EJvlGh_FgcI'},
-              {'name': 'Rocky', 'trailer': 'https://www.youtube.com/watch?v=3VUblDwa648'},
-              {'name': 'Ben Hur', 'trailer': 'https://www.youtube.com/watch?v=NR1ZHKw09n8'},
-              {'name': 'Citizen Kane', 'trailer': 'https://www.youtube.com/watch?v=_1A_WUNQlKY'},
+              {'name': 'Star Wars', 'trailer': 'https://www.youtube.com/watch?v=CcfZk8H7aQo'},
+#               {'name': 'Amelie', 'trailer': 'https://www.youtube.com/watch?v=HEFrLnS5sQY'},
+#               {'name': 'Patton', 'trailer': 'https://www.youtube.com/watch?v=g-0dTpzNzwo'},
+#               {'name': 'Bananas', 'trailer': 'https://www.youtube.com/watch?v=Xyqm-wWnX0A'},
+#               {'name': 'Zelig', 'trailer': 'https://www.youtube.com/watch?v=agkCEOHQVgg'},
+#               {'name': 'Strange Brew', 'trailer': 'https://www.youtube.com/watch?v=yZCI39NWZ5g'},
+#               {'name': 'The Good, the Bad and the Ugly', 'trailer': 'https://www.youtube.com/watch?v=WCN5JJY_wiA'},
+#               {'name': 'Monty Python and the Holy Grail', 'trailer': 'https://www.youtube.com/watch?v=urRkGvhXc8w'},
+#               {'name': 'Terminator 2', 'trailer': 'https://www.youtube.com/watch?v=eajuMYNYtuY'},
+#               {'name': 'Casablanca', 'trailer': 'https://www.youtube.com/watch?v=EJvlGh_FgcI'},
+#               {'name': 'Rocky', 'trailer': 'https://www.youtube.com/watch?v=3VUblDwa648'},
+#               {'name': 'Ben Hur', 'trailer': 'https://www.youtube.com/watch?v=NR1ZHKw09n8'},
+#               {'name': 'Citizen Kane', 'trailer': 'https://www.youtube.com/watch?v=_1A_WUNQlKY'},
               {'name': 'The Razor''s Edge', 'trailer': 'https://www.youtube.com/watch?v=mlbbzB2hgss'}
               ]
             

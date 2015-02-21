@@ -1,0 +1,240 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>Fresh Tomatoes!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 120px;
+        }
+        
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        
+        .navbar {
+            line-height: 100px;
+            height: 100px;
+            padding-top: 0;
+        }
+        .hanging-close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 30px;
+            padding-top: 30px;
+            padding-bottom 30px;
+        }
+        .col-md-4 {
+            height: 450px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 60%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: 30px;
+            height: 80%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" text-center href="#"><h1>Fresh Tomatoes Movie Trailers</h1></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="zmr1iSG3RTA" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMzAwMjM4NzA2OV5BMl5BanBnXkFtZTcwMDI0NzAwMQ@@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0056172/?ref_=nv_sr_1" target="_blank">Lawrence of Arabia</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="CcfZk8H7aQo" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTcyMzQ5NDM4OV5BMl5BanBnXkFtZTcwODUwNDg3OA@@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0078788/?ref_=nv_sr_1" target="_blank">Apocalypse Now</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="HEFrLnS5sQY" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTYzNjkxMTczOF5BMl5BanBnXkFtZTgwODg5NDc2MjE@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0211915/?ref_=nv_sr_1" target="_blank">Le fabuleux destin d'Amélie Poulain</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="g-0dTpzNzwo" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTI5ODQ5MDgzNV5BMl5BanBnXkFtZTYwMzA5NzE5.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0066206/?ref_=nv_sr_1" target="_blank">Patton</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="Xyqm-wWnX0A" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTc2MTE3MzI3MF5BMl5BanBnXkFtZTcwODg3OTYwNA@@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0066808/?ref_=nv_sr_1" target="_blank">Bananas</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="agkCEOHQVgg" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTI2Njk0Nzk4MV5BMl5BanBnXkFtZTcwMDM4NDMyMQ@@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0086637/?ref_=nv_sr_1" target="_blank">Zelig</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="yZCI39NWZ5g" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMjE0MTI4OTQzOF5BMl5BanBnXkFtZTcwOTg0MzMyMQ@@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0086373/?ref_=nv_sr_1" target="_blank">The Adventures of Bob & Doug McKenzie: Strange Brew</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="WCN5JJY_wiA" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0060196/?ref_=nv_sr_1" target="_blank">Il buono, il brutto, il cattivo.</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="urRkGvhXc8w" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTkzODczMTgwM15BMl5BanBnXkFtZTYwNTAwODI5.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0071853/?ref_=nv_sr_1" target="_blank">Monty Python and the Holy Grail</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="eajuMYNYtuY" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTg5NzUwMDU5NF5BMl5BanBnXkFtZTcwMjk2MDA4Mg@@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0103064/?ref_=nv_sr_1" target="_blank">Terminator 2: Judgment Day</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="EJvlGh_FgcI" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMjQwNDYyNTk2N15BMl5BanBnXkFtZTgwMjQ0OTMyMjE@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0034583/?ref_=nv_sr_1" target="_blank">Casablanca</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="3VUblDwa648" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTY5MDMzODUyOF5BMl5BanBnXkFtZTcwMTQ3NTMyNA@@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0075148/?ref_=nv_sr_1" target="_blank">Rocky</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="NR1ZHKw09n8" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BNjg2NjA3NDY2OV5BMl5BanBnXkFtZTgwNzE3NTkxMTE@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0052618/?ref_=nv_sr_1" target="_blank">Ben-Hur</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="_1A_WUNQlKY" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTQ2Mjc1MDQwMl5BMl5BanBnXkFtZTcwNzUyOTUyMg@@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0033467/?ref_=nv_sr_1" target="_blank">Citizen Kane</a></h2>
+</div>
+
+
+<div class="col-md-4 text-center movie-tile">
+    <div><data-trailer-youtube-id="mlbbzB2hgss" data-toggle="modal" data-target="#trailer">
+        <img src="http://ia.media-imdb.com/images/M/MV5BMTg2MzE3Nzg3N15BMl5BanBnXkFtZTgwNzcyODgxMTE@.jpg" width="250" height="350">
+    </div>
+    <h2><a href="http://www.imdb.com/title/tt0038873/?ref_=nv_sr_1" target="_blank">The Razor's Edge</a></h2>
+</div>
+
+    </div>
+  </body>
+</html>

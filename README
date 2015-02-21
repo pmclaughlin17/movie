@@ -1,0 +1,48 @@
+Udacity Full Stack Web Developer Class
+Project 1 - Fresh Tomatoes
+Paul S. McLaughlin
+Feb 21, 2015
+======================================
+
+Project requirements
+--------------------
+Fresh Tomatoes shows a list of movies on a web-page
+When you click on a movie, it pulls up the trailer for the movie
+
+
+Project enhancements
+--------------------
+
+Implemented link to IMDb using IMDbpy package.  Was able to 
+pull in cover art to show in web page rather than hard coding
+a link.  
+
+Also was able to access IMDBid id using IMDbpy and that enabled
+me to create a link to the appropriate IMDb movie page when you
+click on the title of the movie. 
+
+Trailer links are not included in the IMDb database so I had to 
+store those in an array.  Used a dictionary to store each movie's
+name and trailer URL and stored those dictionaries in a list.
+
+Other changes to fresh_tomatoes.ph
+----------------------------------
+
+I was having an issue where any movie with more than one line of
+title was pushing the movie below it to the right and leaving a
+blank space.  I set the height to be fixed and that seems to have
+resolved the issue.
+
+ .col-md-4 {
+            height: 450px;
+        }
+        
+Added a div to so I could have a link to the trailer and a link
+to IMDB.
+
+
+Requirements
+------------
+
+Python 2.7
+IMDbpy - link to IMDbpy - http://imdbpy.sourceforge.net/downloads.html
